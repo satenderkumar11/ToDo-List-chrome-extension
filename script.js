@@ -16,7 +16,11 @@ function getAndUpdate(){
         itemJsonArray.push([tit, desc]);
         localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
     }
+    
+    
     update();
+    document.getElementById('title').value="";
+    document.getElementById('description').value="";
 }
 
 function update(){
@@ -105,13 +109,7 @@ function deleted(itemIndex){
 
 
 
-// for (i of deleteIndex) {
-//     i.addEventListener('click', deleted(i.dataset.ind)
-//     )};
-// for (let i = 0; i < deleteIndex.length; i++) {
-//         deleteIndex[i].addEventListener("click",deleted(deleteIndex[i].dataset.ind));
-//   }
-  
+
 
 function clearStorage(){
     if (confirm("Do you really want to clear?")){
